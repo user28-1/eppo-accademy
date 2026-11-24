@@ -1,10 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>EPPO Academy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPPO Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<h1>EPPO Academy</h1>
-<p>Sito in costruzione</p>
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>EPPO Academy</h1>
+
+            <p>
+                Interactive learning platform dedicated to the
+                European Public Prosecutor's Office (EPPO)
+            </p>
+
+            <div class="hero-buttons">
+                <button id="darkModeBtn">
+                    Dark Mode
+                </button>
+
+                <button id="languageBtn">
+                    ITA / ENG
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav class="main-nav">
+
+        <a href="#about">About</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#structure">Organization</a>
+        <a href="#competence">Competence</a>
+        <a href="#simulator">Simulator</a>
+
+    </nav>
+
+    <main>
+
+        <section id="about" class="section">
+
+            <h2>What is EPPO?</h2>
+
+            <p>
+                The European Public Prosecutor’s Office (EPPO)
+                is the independent prosecution office of the
+                European Union responsible for investigating,
+                prosecuting and bringing to judgment criminal
+                offences affecting the financial interests of
+                the European Union.
+            </p>
+
+        </section>
+
+        <section id="dashboard" class="section">
+
+            <h2>Learning Dashboard</h2>
+
+            <div class="dashboard-grid">
+
+                <div class="card">
+                    <h3>Accuracy</h3>
+                    <p id="accuracy">0%</p>
+                </div>
+
+                <div class="card">
+                    <h3>Completed Quizzes</h3>
+                    <p id="completedQuiz">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Completed Cases</h3>
+                    <p id="completedCases">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>User Level</h3>
+                    <p id="userLevel">Beginner</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="structure" class="section">
+
+            <h2>EPPO Organizational Structure</h2>
+
+            <div class="org-chart">
+
+                <div class="org-node">
+                    European Chief Prosecutor
+                </div>
+
+                <div class="org-node">
+                    College of European Prosecutors
+                </div>
+
+                <div class="org-node">
+                    Permanent Chambers
+                </div>
+
+                <div class="org-node">
+                    European Delegated Prosecutors
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="competence" class="section">
+
+            <h2>EPPO Competence Map</h2>
+
+            <div class="competence-container">
+
+                <div class="competence yes">
+
+                    <h3>EPPO Competence</h3>
+
+                    <ul>
+                        <li>EU Funds Fraud</li>
+                        <li>Corruption affecting EU finances</li>
+                        <li>Misappropriation of EU funds</li>
+                        <li>Money laundering linked to PIF offences</li>
+                        <li>EU Customs Duties Fraud</li>
+                        <li>Cross-border VAT Fraud</li>
+                        <li>Criminal Organizations targeting EU funds</li>
+                    </ul>
+
+                </div>
+
+                <div class="competence no">
+
+                    <h3>Not EPPO Competence</h3>
+
+                    <ul>
+                        <li>Murder</li>
+                        <li>Robbery</li>
+                        <li>Terrorism</li>
+                        <li>Drug trafficking</li>
+                        <li>Ordinary national tax offences</li>
+                        <li>Excise evasion (simple cases)</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="simulator" class="section">
+
+            <h2>EPPO Jurisdiction Simulator</h2>
+
+            <form id="simulatorForm">
+
+                <label>
+                    Offence Type
+                </label>
+
+                <select id="offenceType">
+
+                    <option value="euFunds">
+                        EU Funds Fraud
+                    </option>
+
+                    <option value="vat">
+                        Cross-border VAT Fraud
+                    </option>
+
+                    <option value="corruption">
+                        Corruption
+                    </option>
+
+                    <option value="excise">
+                        Excise Fraud
+                    </option>
+
+                </select>
+
+                <label>
+                    Damage Amount (€)
+                </label>
+
+                <input
+                    type="number"
+                    id="damageAmount"
+                    placeholder="10000000">
+
+                <label>
+                    Member States Involved
+                </label>
+
+                <input
+                    type="number"
+                    id="memberStates"
+                    placeholder="2">
+
+                <button type="button" id="checkJurisdiction">
+                    Check Competence
+                </button>
+
+            </form>
+
+            <div id="simulatorResult">
+
+                Result will appear here.
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            EPPO Academy © 2026
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
 </body>
 </html>
